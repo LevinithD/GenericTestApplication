@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/countLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Q1"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/questionLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text="Question"
+            android:textSize="24sp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <TableRow>
+                <TextView>
+
+                </TextView>
+                <TextView>
+
+                </TextView>
+                <TextView>
+
+                </TextView>
+                <TextView>
+
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView>
+
+                </TextView>
+                <TextView>
+
+                </TextView>
+                <TextView>
+
+                </TextView>
+                <TextView>
+
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView>
+
+                </TextView>
+                <TextView>
+
+                </TextView>
+                <TextView>
+
+                </TextView>
+                <TextView>
+
+                </TextView>
+            </TableRow>
+            <TableRow>
+                <TextView>
+
+                </TextView>
+                <TextView>
+
+                </TextView>
+                <TextView>
+
+                </TextView>
+                <TextView>
+
+                </TextView>
+            </TableRow>
+            <TableRow>
+                <TextView>
+
+                </TextView>
+                <TextView>
+
+                </TextView>
+                <TextView>
+
+                </TextView>
+                <TextView>
+
+                </TextView>
+            </TableRow>
+        </TableLayout>
+
+
+        <Button
+            android:id="@+id/ansBtn1"
+            android:layout_width="@dimen/ansBtn_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:onClick="checkAnswer"
+            android:text="Answer1" />
+
+        <Button
+            android:id="@+id/ansBtn2"
+            android:layout_width="@dimen/ansBtn_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:onClick="checkAnswer"
+            android:text="Answer2" />
+
+        <Button
+            android:id="@+id/ansBtn3"
+            android:layout_width="@dimen/ansBtn_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:onClick="checkAnswer"
+            android:text="Answer3" />
+
+        <Button
+            android:id="@+id/ansBtn4"
+            android:layout_width="@dimen/ansBtn_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:onClick="checkAnswer"
+            android:text="Answer4" />
+
+        <Button
+            android:id="@+id/ansBtn5"
+            android:layout_width="@dimen/ansBtn_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:onClick="checkAnswer"
+            android:text="Answer5" />
+
+        <Button
+            android:id="@+id/ansBtn6"
+            android:layout_width="@dimen/ansBtn_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:onClick="checkAnswer"
+            android:text="Answer6" />
+
+        <Button
+            android:id="@+id/ansBtn7"
+            android:layout_width="@dimen/ansBtn_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:onClick="checkAnswer"
+            android:text="Answer7" />
+
+        <Button
+            android:id="@+id/ansBtn8"
+            android:layout_width="@dimen/ansBtn_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:onClick="checkAnswer"
+            android:text="Answer8" />
+
+        <Button
+            android:id="@+id/ansBtn9"
+            android:layout_width="@dimen/ansBtn_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:onClick="checkAnswer"
+            android:text="Answer9" />
+
+        <Button
+            android:id="@+id/ansBtn10"
+            android:layout_width="@dimen/ansBtn_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:onClick="checkAnswer"
+            android:text="Answer10" />
+
+    </LinearLayout>
+</ScrollView>
