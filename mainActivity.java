@@ -39,14 +39,7 @@ public class MainActivity extends AppCompatActivity {
     private Button ansBtn1;
     private Button ansBtn2;
     private Button ansBtn3;
-    private Button ansBtn4;
-    private Button ansBtn5;
-    private Button ansBtn6;
-    private Button ansBtn7;
-    private Button ansBtn8;
-    private Button ansBtn9;
-    private Button ansBtn10;
-
+ 
     private String rightAnswer;
     private int rightAnswerCount = 0;
     private int quizCount = 1;
@@ -65,16 +58,13 @@ public class MainActivity extends AppCompatActivity {
         ansBtn2 = findViewById(R.id.ansBtn2);
         ansBtn3 = findViewById(R.id.ansBtn3);
         ansBtn4 = findViewById(R.id.ansBtn4);
-        ansBtn5 = findViewById(R.id.ansBtn5);
-        ansBtn6 = findViewById(R.id.ansBtn6);
-        ansBtn7 = findViewById(R.id.ansBtn7);
-        ansBtn8 = findViewById(R.id.ansBtn8);
-        ansBtn9 = findViewById(R.id.ansBtn9);
-        ansBtn10 = findViewById(R.id.ansBtn10);
-
+      
         // Receive quizCategory from startActivity
         int quizCategory = getIntent().getIntExtra("QUIZ_CATEGORY", 0);
-        String[][] quizData = {readTextFile(quizCategory)};
+        String[][] quizData = {
+            //{"QuizCategory", "Question", "Correct Answer", "Choice2", "Choice3", "Choice4"}
+            
+        };
 
         Log.v("CATEGORY_TAG", quizCategory + "");
 
@@ -89,12 +79,6 @@ public class MainActivity extends AppCompatActivity {
             tmpArray.add(quizData[i][3]); // Choice 2
             tmpArray.add(quizData[i][4]); // Choice 3
             tmpArray.add(quizData[i][5]); // Choice 4
-            tmpArray.add(quizData[i][6]); // Choice 5
-            tmpArray.add(quizData[i][7]); // Choice 6
-            tmpArray.add(quizData[i][8]); // Choice 7
-            tmpArray.add(quizData[i][9]); // Choice 8
-            tmpArray.add(quizData[i][10]); // Choice 9
-            tmpArray.add(quizData[i][11]); // Choice 10
 
             // Add tmpArray to quizArray
             quizArray.add(tmpArray);
@@ -135,12 +119,6 @@ public class MainActivity extends AppCompatActivity {
             ansBtn2.setText(quiz.get(1));
             ansBtn3.setText(quiz.get(2));
             ansBtn4.setText(quiz.get(3));
-            ansBtn5.setText(quiz.get(4));
-            ansBtn6.setText(quiz.get(5));
-            ansBtn7.setText(quiz.get(6));
-            ansBtn8.setText(quiz.get(7));
-            ansBtn9.setText(quiz.get(8));
-            ansBtn10.setText(quiz.get(9));
 
             // Remove this quiz from quizArray
             quizArray.remove(randomNum);
@@ -207,69 +185,10 @@ public class MainActivity extends AppCompatActivity {
             case 4:
                 fileName = "4_MCSA 70-740.txt";
                 break;
-            case 5:
-                fileName = "5_MCSA 70-483.txt";
-                break;
-            case 6:
-                fileName = "6_MCSA 70-486.txt";
-                break;
-            case 7:
-                fileName = "7_MCSA 70-480.txt";
-                break;
-            case 8:
-                fileName = "8_MCSA 70-741.txt";
-                break;
-            case 9:
-                fileName = "9_MCSA 70-742.txt";
-                break;
-            case 10:
-                fileName = "10_MD-100.txt";
-                break;
-            case 11:
-                fileName = "11_ITILv4Foundation.txt";
-                break;
-            case 12:
-                fileName = "12_PRINCE2FOUNDATION.txt";
-                break;
-            case 13:
-                fileName = "13_MCSA 70-778.txt";
-                break;
-            case 14:
-                fileName = "4_MCSA 70-779.txt";
-                break;
             default:
                 fileName = "null";
                 break;
 
         }
-
-        String text = "";
-
-        Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
-        intent.addCategory(Intent.CATEGORY_OPENABLE);
-        intent.setType("*/*");
-        startActivityForResult(intent, 1);
-        getContentResolver().openFileDescriptor(intent.getData().);
-
-        return lines;
-    }
-    /* Checks if external storage is available for read and write */
-    public boolean isExternalStorageWritable() {
-        String state = Environment.getExternalStorageState();
-        if (Environment.MEDIA_MOUNTED.equals(state)) {
-            return true;
-        }
-        return false;
-    }
-
-    /* Checks if external storage is available to at least read */
-    public boolean isExternalStorageReadable()
-    {
-        String state = Environment.getExternalStorageState();
-        if (Environment.MEDIA_MOUNTED.equals(state) ||
-                Environment.MEDIA_MOUNTED_READ_ONLY.equals(state)) {
-            return true;
-        }
-        return false;
     }
 }
