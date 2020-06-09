@@ -1,60 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".startActivity"
+    tools:context=".StartActivity"
     android:gravity="center_horizontal"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="fill_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:text="Generic Test Application"
+        android:textSize="30sp"
+        android:layout_marginTop="80dp" />
 
+    <EditText
+        android:id="@+id/txt_path"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:hint="@string/app_name"
+        android:inputType="textUri"
+        android:layout_marginTop="30sp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:text="Choose Practice Questions"
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/ITILv3"
-            android:layout_width="@dimen/startBtn_width"
-            android:layout_height="@dimen/startBtn_height"
-            android:layout_marginTop="100dp"
-            android:onClick="startQuiz"
-            android:text="ITIL Foundation v3" />
-
-        <Button
-            android:id="@+id/AZ900"
-            android:layout_width="@dimen/startBtn_width"
-            android:layout_height="@dimen/startBtn_height"
-            android:layout_marginTop="10dp"
-            android:onClick="startQuiz"
-            android:text="AZ-900" />
-
-
-        <Button
-            android:id="@+id/MS100"
-            android:layout_width="@dimen/startBtn_width"
-            android:layout_height="@dimen/startBtn_height"
-            android:layout_marginTop="10dp"
-            android:onClick="startQuiz"
-            android:text="MS-100" />
-
-        <Button
-            android:id="@+id/MCSA70740"
-            android:layout_width="@dimen/startBtn_width"
-            android:layout_height="@dimen/startBtn_height"
-            android:layout_marginTop="10dp"
-            android:onClick="startQuiz"
-            android:text="70-740" />
-
-    </LinearLayout>
-</ScrollView>
+    <Button
+        android:id="@+id/btn_filePicker"
+        android:layout_width="@dimen/answerBtn_width"
+        android:layout_height="@dimen/answerBtn_height"
+        android:text="Load File"
+        android:layout_marginTop="100dp"
+        android:onClick="startQuiz" />
+</LinearLayout>
