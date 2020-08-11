@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="GenericTestApp.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label 
+            x:Name="countLabel"
+            HorizontalOptions="Center"
+            VerticalOptions="CenterAndExpand" 
+            Text="Q1" 
+            FontSize="Large"
+            Margin="30"
+            />
+
+        <Label 
+            x:Name="questionLabel"
+            HorizontalOptions="Center"
+            VerticalOptions="CenterAndExpand" 
+            Text="Question" 
+            FontSize="Title"
+            Margin="60"
+            />
+
+        <Button
+            x:Name="answerBtn1"
+            WidthRequest="300"
+            HeightRequest="60"
+            Text="answer1"
+            Margin="80"
+            Clicked="checkAnswer"
+            />
+
+        <Button
+            x:Name="answerBtn2"
+            WidthRequest="300"
+            HeightRequest="60"
+            Text="answer2"
+            Margin="80"
+            Clicked="checkAnswer"
+            />
+
+        <Button
+            x:Name="answerBtn3"
+            WidthRequest="300"
+            HeightRequest="60"
+            Text="answer3"
+            Margin="80"
+            Clicked="checkAnswer"
+            />
+
+        <Button
+            x:Name="answerBtn4"
+            WidthRequest="300"
+            HeightRequest="60"
+            Text="answer4"
+            Margin="80"
+            
+            />
+    </StackLayout>
+
+</ContentPage>
